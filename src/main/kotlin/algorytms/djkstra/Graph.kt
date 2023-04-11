@@ -1,40 +1,23 @@
 package algorytms.djkstra
 
 class Graph {
-    private val start = Node("start").setCost(0)
+    private val start = Node("start").setLength(0)
     private val end = Node("end")
-    private var started = false
-    fun initGraph(): Graph {
-        val a = Node("a")
-        val b = Node("b")
 
-        start.setNode(a, 6)
-        start.setNode(b, 2)
-
-        b.setNode(a, 3)
-        b.setNode(end, 5)
-
-        a.setNode(end, 1)
+    fun addNode(nodeFrom: Node, nodeTo: Node, length: Int): Graph {
+        nodeFrom.setNode(nodeTo, length)
         return this
     }
 
     fun getStart(): Node {
-        setStarted()
         return start
     }
 
-    fun getMinCost(): Int? {
-        if (!isStarted()) {
-            return null
-        }
-        return end.getCost()
+    fun getEnd(): Node {
+        return end
     }
 
-    private fun isStarted(): Boolean {
-        return started
-    }
-
-    private fun setStarted() {
-        started = true
+    fun getMinCost(): Int {
+        return end.getLength()
     }
 }
