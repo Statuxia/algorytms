@@ -17,7 +17,7 @@ class Graph {
         return end
     }
 
-    fun getMinCost(): Int {
+    fun getMinLength(): Int {
         return end.getLength()
     }
 }

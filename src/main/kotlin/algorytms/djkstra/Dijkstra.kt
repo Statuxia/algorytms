@@ -37,7 +37,7 @@ fun task1() {
 
     nodeProcessing(start)
     // MinCost: 6
-    println("MinLength: " + graph.getMinCost())
+    println("MinLength: " + graph.getMinLength())
 }
 
 fun task2() {
@@ -72,7 +72,7 @@ fun task2() {
     nodeProcessing(start)
 
     // MinCost: 8
-    println("MinLength: " + graph.getMinCost())
+    println("MinLength: " + graph.getMinLength())
 }
 
 fun task3() {
@@ -98,7 +98,7 @@ fun task3() {
     b.setNode(end, 30)
 
     nodeProcessing(start)
-    println("MinLength: " + graph.getMinCost())
+    println("MinLength: " + graph.getMinLength())
 }
 
 fun task4() {
@@ -126,7 +126,7 @@ fun task4() {
     c.setNode(end, 2)
 
     nodeProcessing(start)
-    println("MinLength: " + graph.getMinCost())
+    println("MinLength: " + graph.getMinLength())
 }
 
 fun nodeProcessing(node: Node) {
